@@ -14,7 +14,7 @@ def logistic_loss(X , y , w , b , lamda): # X is 2D array and W is 1D array
     loss = 0
     for i in range(m):
         z = Sigmoid(w , b , X[i])
-        loss += -y * np.log(z) - (1 - y)*np.log(1 - z)
+        loss += -y[i] * np.log(z) - (1 - y[i])*np.log(1 - z)
     loss = loss / m
     loss += lamda*np.sum(w**2) / (2*m) # This is regularization term. (L2 Regularization -> Ridge)
     return loss
