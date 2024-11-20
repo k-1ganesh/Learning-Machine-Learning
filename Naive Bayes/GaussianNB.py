@@ -1,3 +1,4 @@
+import numpy as np
 class GaussianNB:
     def __init__(self):
         self.prior_prob = {}
